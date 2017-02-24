@@ -15,8 +15,8 @@ html {
 
     header, footer { 
         background-color: black;
-        height: 10%;  
-        max-height: 10%;
+        height: 30%;  
+        max-height: 30%;
 
         & > .content {
             height: 20%;
@@ -26,10 +26,22 @@ html {
         }
     }
 
+    header > .content {
+        height: 100%;
+        display: flex;
+    }
+
     footer {
         background-color: black;
-        height: 5%;    
-        max-height: 10%;          
+        height: 10%;    
+        max-height: 10%;
+
+        .content {
+            justify-content: flex-start;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }          
     }
 
     .content {
@@ -40,5 +52,51 @@ html {
         justify-content: center;
         align-content: center;
         height: 100%;
+
+        .mainMenuWrapper {
+            display: flex;
+            justify-content: flex-end
+        }
+        
+        .mainMenu {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;  
+            align-items: center;
+            width: 50%;
+
+            li {
+                float: left;
+                margin-right: 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: darken(white, 10%);
+                    }
+                }
+            }
+        }
+
+        .logoWrapper {
+            display: flex;
+            width: 40%;
+            align-items: center;
+            padding-left: 50px;
+
+            .logo{
+                padding: 20px;
+                border: 1px solid white;
+                border-radius: 50%;
+                height: 70%;
+                color: black;
+                background-color: white;
+                align-self: center;
+            }
+        }
     }
 }
